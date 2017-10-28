@@ -1,7 +1,7 @@
 #Assignment1
 
-makeCacheMatrix <- function(x = matrix()) {
-  inverse <- NULL
+makeCacheMatrix <- function(x = matrix()) {          # the matrix we want to get inversed
+  inverse <- NULL                                     # here we store the inversed matrix
   set <- function(y) {
     x <<- y
     inverse <<- NULL
