@@ -20,8 +20,8 @@ cacheSolve <- function(x, ...) {
     message("getting cached data")
     return(inverse)
   }
-  data <- x$get()
-  inverse <- solve(data)
+  matrix <- x$get()
+  inverse <- solve(matrix)
   x$setinv(inverse)
   inverse
   

@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#Assignment1\n\nmakeCacheMatrix <- function(x = matrix()) {\n  inverse <- NULL\n  set <- function(y) {\n    x <<- y\n    inverse <<- NULL\n  }\n  get <- function() x\n  setinv <- function(inv) inverse <<- inv\n  getinv <- function() inverse\n  list(set = set, get = get, setinv = setinv, getinv = getinv)\n}\n#Assignment 2\n\ncacheSolve <- function(x, ...) {\n  \n  inverse <- x$getinv()\n  if(!is.null(inverse)) {\n    message(\"getting cached data\")\n    return(inverse)\n  }\n  matrix <- x$get()\n  inverse <- solve(matrix)\n  x$setinv(inverse)\n  inverse\n  \n} ",
+    "created" : 1509202933725.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "834729305",
+    "id" : "7367C63F",
+    "lastKnownWriteTime" : 1509204220,
+    "last_content_update" : 1509204220874,
+    "path" : "D:/R/week3_coursera/week3_InvCacheMatrix.R",
+    "project_path" : "week3_InvCacheMatrix.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
